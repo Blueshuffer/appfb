@@ -12,7 +12,7 @@ const UrlManager = () => {
 
   const fetchUrls = async () => {
     try {
-      const response = await fetch("https://apipixcel.adsdep.com/url");
+      const response = await fetch("https://api-url.phoneonetwo.com/url");
       if (!response.ok) {
         throw new Error('Failed to fetch URLs');
       }
@@ -27,7 +27,7 @@ const UrlManager = () => {
   const addUrl = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://apipixcel.adsdep.com/addurl", {
+      const response = await fetch("https://api-url.phoneonetwo.com/addurl", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, urls: newUrl }),
@@ -51,7 +51,7 @@ const UrlManager = () => {
 
   const deleteUrl = async (id) => {
     try {
-      const response = await fetch(`https://apipixcel.adsdep.com/durl/${id}`, {
+      const response = await fetch(`https://api-url.phoneonetwo.com/durl/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

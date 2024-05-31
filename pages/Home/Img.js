@@ -3,7 +3,7 @@ import React from 'react';
 
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://bot.adsdep.com/api/get');
+    const res = await fetch('https://api.phoneonetwo.com/api/get');
     if (!res.ok) {
       throw new Error('Failed to fetch data');
     }
@@ -21,7 +21,7 @@ export default function Img({ data }) {
       {data && data.length > 0 ? (
         data.map((item) => (
           <div key={item.id}>
-            <img src={`https://bot.adsdep.com/${item.url}`} alt={item.filename} style={{ width: '100%', height: '100%', padding: '10px' }} />
+            <img src={`https://api.phoneonetwo.com/${item.url}`} alt={item.filename} style={{ width: '100%', height: '100%', padding: '10px' }} />
           </div>
         ))
       ) : (

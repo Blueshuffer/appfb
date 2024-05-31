@@ -2,12 +2,12 @@ import React from 'react';
 import Header from './Home/header';
 import Main from './Home/main';
 import Img from './Home/Img';
-import Urls from './urls/url';
+import Head from 'next/head';
 
 
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://bot.adsdep.com/api/get');
+    const res = await fetch('https://api.phoneonetwo.com/api/get');
     if (!res.ok) {
       throw new Error('Failed to fetch data');
     }
@@ -24,17 +24,28 @@ export default function IndexPage({ data }) {
  
   return (
     <>
- 
+   <Head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title> PG Games ความแตกต่างที่เป็นตัวตัดสิน pg slot game </title>
+<meta name="description" content="ความแตกต่างที่เป็นตัวตัดสิน pg slot game และยังมีโปรโมชั่นแจกให้กับสมาชิกทุกท่านอีกด้วย" />
+<meta property="og:title" content="PG Games ความแตกต่างที่เป็นตัวตัดสิน pg slot game"/>
+<meta property="og:description" content="ความแตกต่างที่เป็นตัวตัดสิน pg slot game และยังมีโปรโมชั่นแจกให้กับสมาชิกทุกท่านอีกด้วย"/>
+<meta property="og:url" content="https://www.chaiyoloan.com/"/>
+<meta property="og:image" content="https://www.chaiyoloan.com/img/logo.jpg"/>
+
+
+
+</Head>
   
       <section id="hero">
         <div className="hero-container">
 
         <div className="imges"> 
-          <Urls>
-            
+      
+            <a href="https://line.me/ti/p/@fahlotto">     
             <Img data={data} className="img" />
          
-          </Urls>
+            </a>
         </div>   </div>
       </section>
       <Header />

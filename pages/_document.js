@@ -5,7 +5,14 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Google Tag Manager */}
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+      
+        
+        
+
+
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -13,7 +20,7 @@ class MyDocument extends Document {
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-5JBZKSV2');
+                })(window,document,'script','dataLayer','GTM-WPG53FXZ');
               `,
             }}
           />
@@ -23,7 +30,7 @@ class MyDocument extends Document {
           {/* Google Tag Manager (noscript) */}
           <noscript>
             <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=GTM-5JBZKSV2`}
+              src={`https://www.googletagmanager.com/ns.html?id=GTM-WPG53FXZ`}
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}
